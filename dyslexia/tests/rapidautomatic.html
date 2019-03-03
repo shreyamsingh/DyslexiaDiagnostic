@@ -1,57 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Left-Right Test</title>
+  <meta charset="UTF-8">
+  <title>Rapid Automatic Test</title>
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Raleway" rel="stylesheet">
 </head>
 <body>
-    <h1>Left-Right Dyslexia Test</h1>
-    <p>X|</p>
-    <input type="text" id="user1"/><br>
-    <p>|X</p>
-    <input type="text" id="user2"/><br>
-    <p>X|</p>
-    <input type="text" id="user3"/><br>
-    <p>X|</p>
-    <input type="text" id="user4"/><br>
-    <p>|X</p>
-    <input type="text" id="user5"/><br>
-    <p>X|</p>
-    <input type="text" id="user6"/><br>
-    <p>X|</p>
-    <input type="text" id="user7"/><br>
-    <p>X|</p>
-    <input type="text" id="user8"/><br>
-    <p>|X</p>
-    <input type="text" id="user9"/><br>
-    <p>|X</p>
-    <input type="text" id="user10"/><br>
-    <input type="submit" text="Submit" onclick="check()">
+  <style>body,h1,h2,h3,h4,h5,button,a,p {font-family: "Noto Sans", sans-serif}</style>
+  <h1>Rapid Automatic Dyslexia Test</h1>
+  <p> What is the color of the second figure? <br>
+  A. Red B. Blue C. Purple D. Black</p>
+  <img src="../C, 1-3.png" style="width:300px;height:300px;"><br>
+  <input type="text" id="user1"/><br>
+  <p> What is the color of the first figure? <br>
+  A. Red B. Blue C. Purple D. Black</p>
+    <img src="../C, 1-3.png" style="width:300px;height:300px;"><br>
+  <input type="text" id="user2"/><br>
+  <p> What is the color of the fourth figure? <br>
+  A. Pink B. Green C. Brown D. Yellow</p>
+    <img src="../C, 1-3.png" style="width:300px;height:300px;"><br>
+  <input type="text" id="user3"/><br>
+  <p> Which circle is red? <br>
+  A B C D</p>
+      <img src="../C, 4-7.png" style="width:300px;height:300px;"><br>
+  <input type="text" id="user4"/><br>
+  <p> How many different colors are shown in the figure (including text and background)? <br>
+A.1  B.3  C.5  D.7</p>
+      <img src="../C, 4-7.png" style="width:300px;height:300px;"><br>
+  <input type="text" id="user5"/><br>
+  <p> What is the color of the first figure? <br>
+A. Pink  B. Green C. Brown D. Yellow</p>
+        <img src="../C, 4-7.png" style="width:300px;height:300px;"><br>
+  <input type="text" id="user6"/><br>
+  <p> What is the color of the fourth shape? <br>
+A. Red  B. Blue  C. Purple D. Black</p>
+        <img src="../C, 4-7.png" style="width:300px;height:300px;"><br>
+  <input type="text" id="user7"/><br>
 
-    <script>
-        var correct = 0;
-        function figure(inp, corr) {
-            var user = document.getElementById(inp).value;
-            user = user.toLowerCase();
-            if ((user == corr) || (user == corr[0])) {
-                correct++;
+   <p> What is the shape of the figure? <br>
+ A. Square B. Circle C. Diamond D. Triangle</p>
+<img src="../O, 1.png" style="width:300px;height:300px;"><br>
+ <input type="text" id="user16"/><br>
+ <p> What does the picture show? <br>
+ A. Car B. Lollipop C. Dragon D. Swing</p>
+<img src="../O, 2.png" style="width:300px;height:300px;"><br>
+ <input type="text" id="user17"/><br>
+ <p> What is the shape of the third figure? <br>
+  A. Square B. Circle C. Diamond D. Triangle</p>
+<img src="../O, 3.png" style="width:300px;height:300px;"><br>
+ <input type="text" id="user18"/><br>
+ <p> What is the shape of the figure? <br>
+ A. Square B. Circle C. Diamond D. Triangle</p>
+<img src="../O, 4.png" style="width:300px;height:300px;"><br>
+ <input type="text" id="user19"/><br>
+ <p> What does the picture show? <br>
+A. Sponge B. Flag C. Faucet D. Chair</p>
+<img src="../O, 5.png" style="width:300px;height:300px;"><br>
+ <input type="text" id="user20"/><br>
+ <p> What is the shape of the first figure? <br>
+ A. Square B. Circle C. Diamond D. Triangle</p>
+<img src="../O, 6.png" style="width:300px;height:300px;"><br>
+ <input type="text" id="user21"/><br>
+ <p> What is the shape of the figure? <br>
+A. Hexagon  B. Diamond C.Semicircle  D. Star</p>
+<img src="../O, 7.png" style="width:300px;height:300px;"><br>
+ <input type="text" id="user22"/><br>
+
+     <p>How many total circles are in the figure?
+<br>A.1  B.2  C.6  D.8
+ <img src="../N, 1-6.png" style="width:300px;height:300px;">
+   <input type="text" id="user31"/><br>
+
+   <p>How many total squares are in the figure?
+<br>A.1  B.3  C.5  D.7
+ <img src="../N, 1-6.png" style="width:300px;height:300px;">
+   <input type="text" id="user1=32"/><br>
+
+ <p>How many black arrows are in the figure?
+<br>A.1  B.2  C.6  D.8</p>
+ <img src="../N, 1-6.png" style="width:300px;height:300px;">
+   <input type="text" id="user33"/><br>
+
+ <p>How many black squares are there in the first line of the figure?
+<br>A.1  B.3  C.5  D.7</p>
+ <img src="../N, 1-6.png" style="width:300px;height:300px;">
+   <input type="text" id="user34"/><br>
+
+ <p>How many lines are in the picture (including tallies)?
+<br>A.1  B.2  C.6  D.8</p>
+ <img src="../N, 1-6.png" style="width:300px;height:300px;">
+   <input type="text" id="user35"/><br>
+
+ <p>How many tallies are in the figure?
+<br>A.1  B.3  C.5  D.7</p>
+ <img src="../N, 1-6.png" style="width:300px;height:300px;">
+   <input type="text" id="user36"/><br>
+
+ <p>How many total squares are in the figure?
+<br>A.1  B.2  C.6  D.8</p>
+ <img src="../N, 7-12.png" style="width:300px;height:300px;">
+   <input type="text" id="user37"/><br>
+
+
+   <p>What is the fifth letter? (ASPOIUYTRE)
+<br>A. P B. U C. I D. R </p>
+
+   <input type="text" id="user46"/><br>
+
+<p>What is the third letter? (ASPOIUYTRE)
+<br>A. S B. P C. T D. O</p>
+   <input type="text" id="user47"/><br>
+
+<p>What is the seventh letter? (NWCIFEWVNT)
+<br>A. N B. E C. V D. W </p>
+   <input type="text" id="user48"/><br>
+
+<p>What is the third letter? (NWCIFEWVNT)
+<br>A. C B. I C. F D. V</p>
+   <input type="text" id="user49"/><br>
+
+  <p>What is the fourth letter? (DSCNEYSOUR)
+<br>A. D B. N C. Y D. U </p>
+   <input type="text" id="user50"/><br>
+
+<p>What is the ninth letter? (DSCNEYSOUR)
+<br>A. S B. Y C. U D. R</p>
+   <input type="text" id="user51"/><br>
+
+<p>What is the first letter? (DNAYQPEISL)
+<br>A. A B. P C. D D. Q </p>
+   <input type="text" id="user52"/><br>
+
+
+  <input type="submit" text="Submit" onclick="check()">
+  <script>
+
+       var correct = 0;
+       function figure(inp, answer) {
+           var user = document.getElementById(inp).value;
+           user = user.toLowerCase();
+           if (user == answer) {
+               correct ++;
+           }
+       }
+
+       function check() {
+           figure("user1", "c");
+           figure("user2", "b");
+           figure("user3", "d");
+           figure("user4", "c");
+           figure("user5", "c");
+           figure("user6", "b");
+           figure("user7", "b");
+           figure("user8", "b");
+           figure("user9", "a");
+           figure("user10", "d");
+           figure("user11", "c");
+           figure("user12", "b");
+           figure("user13", "a");
+           figure("user14", "d");
+           figure("user15", "b");
+           figure("user16", "c");
+           figure("user1", "d");
+           figure("user2", "a");
+           figure("user3", "c");
+           figure("user4", "c");
+           figure("user5", "c");
+           figure("user6", "c");
+           figure("user7", "b");
+           figure("user8", "d");
+           figure("user9", "a");
+           figure("user10", "b");
+           figure("user11", "c");
+           figure("user12", "c");
+
+            var percentage = 100-((correct/18.0) * 100.0);
+            document.writeln("You have shown "+ percentage + "% of the symptoms of dyscalculia.");
+            if(percentage<=20) {
+            document.writeln("Since your symptoms are very minimal, it is safe to assume that you do not have dyscalculia.");}
+            else if(percentage<=45){
+            document.writeln("You are showing low-moderate symptoms, so consider seeing a medical professional.");}
+            else if(percentage <= 70) {
+                document.writeln("You are showing high-moderate symptoms, so consider seeing a medical professional.");
             }
-        }
-
-        function check() {
-            figure("user1", "left");
-            figure("user2", "right");
-            figure("user3", "left");
-            figure("user4", "left");
-            figure("user5", "right");
-            figure("user6", "left");
-            figure("user7", "left");
-            figure("user8", "left");
-            figure("user9", "right");
-            figure("user10", "right");
-            var percentage = (correct/10.0) * 100;
-            document.writeln(percentage + "%");
-        }
-    </script>
+            else {
+               document.writeln("You are showing severe symptoms and should consult a medical professional.");
+            }
+       }
+   </script>
 </body>
 </html>
