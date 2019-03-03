@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Left-Right Test</title>
+</head>
+<body>
+    <h1>Left-Right Dyslexia Test</h1>
+    <p>X|</p>
+    <input type="text" id="user1"/><br>
+    <p>|X</p>
+    <input type="text" id="user2"/><br>
+    <p>X|</p>
+    <input type="text" id="user3"/><br>
+    <p>X|</p>
+    <input type="text" id="user4"/><br>
+    <p>|X</p>
+    <input type="text" id="user5"/><br>
+    <p>X|</p>
+    <input type="text" id="user6"/><br>
+    <p>X|</p>
+    <input type="text" id="user7"/><br>
+    <p>X|</p>
+    <input type="text" id="user8"/><br>
+    <p>|X</p>
+    <input type="text" id="user9"/><br>
+    <p>|X</p>
+    <input type="text" id="user10"/><br>
+    <input type="submit" text="Submit" onclick="check()">
+
+    <script>
+        var correct = 0;
+        function figure(inp, corr) {
+            var user = document.getElementById(inp).value;
+            user = user.toLowerCase();
+            if ((user == corr) || (user == corr[0])) {
+                correct++;
+            }
+        }
+
+        function check() {
+            figure("user1", "left");
+            figure("user2", "right");
+            figure("user3", "left");
+            figure("user4", "left");
+            figure("user5", "right");
+            figure("user6", "left");
+            figure("user7", "left");
+            figure("user8", "left");
+            figure("user9", "right");
+            figure("user10", "right");
+            var percentage = (correct/10.0) * 100;
+            document.writeln(percentage + "%");
+        }
+    </script>
+</body>
+</html>

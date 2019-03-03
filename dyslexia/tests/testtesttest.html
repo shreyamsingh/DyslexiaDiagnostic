@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+</head>
+<body>
+    <h1>Dyslexia Test</h1>
+    <form><br>
+    Enter your age: <input type="number" id="age"/><br><br>
+    <input type="submit" value="Submit" onclick="formdata()"/><br>
+    </form>
+    <div id="container">
+        <div id="start">Start Quiz!</div>
+        <div id="quiz" style="display: none">
+            <div id="question"></div>
+            <div id="qImg"></div>
+            <div id="choices">
+                <div class="choice" id="A" onclick="checkAnswer('A')"></div>
+                <div class="choice" id="B" onclick="checkAnswer('B')"></div>
+                <div class="choice" id="C" onclick="checkAnswer('C')"></div>
+            </div>
+            <div id="timer">
+                <div id="counter"></div>
+                <div id="btimeGauge"></div>
+                <div id="timeGauge"></div>
+            </div>
+            <div id="progress"></div>
+        </div>
+        <div id="scoreContainer" style="display: none"></div>
+    </div>
+    <script src="quiz.js"></script>
+
+
+<script>
+function formdata()
+{
+    var correct = 0;
+    var age = document.getElementById("age").value;
+    if (age <= 7) {
+        document.writeln("Sorry, most people at this age are not fully able to distinguish left from right")
+    }
+    else {
+        for (i = 0; i < 20; i++) {
+            var minNumber = 0; // The minimum number you want
+            var maxNumber = 1; // The maximum number you want
+            var randomnumber = Math.floor(Math.random() * (maxNumber + 1) + minNumber);
+            if (randomnumber == 0) {
+                document.writeln("X|")
+                var x = document.createElement("INPUT");
+                x.setAttribute("type", "text");
+                x.setAttribute("value", "Hello World!");
+                document.body.appendChild(x);
+            }
+            else if (randomnumber == 1) {
+                document.writeln("|X")
+            }
+        }
+    }
+    document.writeln("<h1>Confirmation Page</h1><br>");
+    document.writeln("Thank you for completing this form.<br><br>");
+}
+</script>
+
+</body>
+</html>

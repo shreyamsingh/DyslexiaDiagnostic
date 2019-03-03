@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Left-Right Test</title>
+</head>
+<body>
+   <h1>Dyscalculia Test</h1>
+
+   <p>What percent of American households own lizards and hamsters?
+   <img src="../animals graph.png" style="width:300px;height:300px;"><br>
+<br>A. 23%   B. 14%   C. 7% D. 21%
+</p>
+   <input type="text" id="user1"/><br>
+
+   <p>Jackie runs at a speed of 15 mph. How long would it take for Jackie to run 75 miles?
+<br> A. 3 hours  B. 4 hours  C. 5 hours  D. 6 hours
+</p>
+   <input type="text" id="user2"/><br>
+
+   <p>Which number of hours of sleep appears most frequently?<br>
+   <img src="../hours of sleep.png" style="width:300px;height:300px;"><br>
+A. 5 hours  B. 8 hours  C. 7 hours  D. 6 hours
+</p>
+   <input type="text" id="user3"/><br>
+
+   <p>How many mL would a half-full 2-liter bottle hold? <br>A. 100 mL   B. 10 mL C. 1000 mL  D. 20 mL</p>
+   <input type="text" id="user4"/><br>
+
+   <p>Kate is building a fence for her garden. The length of her garden is twice the width of her garden. How many meters of fencing would Kate have to buy if the width of her garden is 50 meters?<br>
+ A. 300 meters  B. 200 meters  C. 150 meters  D. 2000 meters</p>
+   <input type="text" id="user5"/><br>
+
+   <p>Ruby loves to code, but her laptop is very slow. She wants to buy a new laptop. Laptop A is $500 with a 20% discount and Laptop B is $600 with a 50% discount. Which laptop is cheaper?<br> A. Laptop A B. Laptop B</p>
+   <input type="text" id="user6"/><br>
+
+   <p>If my bill is $500.00, what would my tip be if I were tipping 16%? Provide your answer with the proper notation.</p>
+   <input type="text" id="user7"/><br>
+
+   <p>Juan is jogging in the park. What is his speed 3 minutes into the jog (do not include units, just the number)?</p>
+   <img src="../juan running graph.png" style="width:300px;height:300px;"><br>
+   <input type="text" id="user8"/><br>
+
+   <p>Find the perimeter of this rectangle (include units).</p>
+   <img src="../rectangle perimeter.png" style="width:300px;height:300px;"><br>
+   <input type="text" id="user9"/><br>
+
+   <p>John buys chocolate for $3.78 and pays with a $5 bill. How much change will he receive(include units)?</p>
+   <input type="text" id="user10"/><br>
+
+   <p>If 2+x=10, then x = ...</p>
+   <input typ e="text" id="user11"/><br>
+
+   <p>Your GPS says in 3.1 miles turn right, then continue straight ahead for 5.7 miles. What is the total number of miles to be driven? Round to the nearest tenth and include units.
+</p>
+   <input type="text" id="user12"/><br>
+
+   <p>How much ice cream would an ice cream cone of height 6 inches and a radius of 7 inches hold? Use 22/7 for π, and exclude units. (Volume of a cone: (π*h*r^2)/3)</p>
+   <input type="text" id="user13"/><br>
+
+   <p>Danny is a resident of Northern Virginia, where there is a 6% tax rate. How much would it cost Danny to buy a $100 cologne bottle?</p>
+   <input type="text" id="user14"/><br>
+
+   <p>Raina and Arden are both working on building robots. The cost of one robot wheel is $20, and they each need two wheels. What is the total cost of robot wheels among Raina and Arden(include units)?</p>
+   <input type="text" id="user15"/><br>
+</body>
+</html>
+
+<p>(5+.4)*10-5</p>
+   <input type="text" id="user16"/><br>
+   <input type="submit" text="Submit" onclick="check()">
+   <script>
+   var correct = 0;
+       arr = [1]
+       function figure(inp, corr, num) {
+           var user = document.getElementById(inp).value;
+           user = user.toLowerCase();
+           if (user == corr) {
+               correct += num;
+           }
+       }
+
+       function check() {
+           figure("user1", "d", arr[0]);
+           figure("user2", "c", arr[1]);
+           figure("user3", "b", arr[2]);
+           figure("user4", "c", arr[3]);
+           figure("user5", "a", arr[4]);
+           figure("user6", "b", arr[5]);
+           figure("user7", "$580.00", arr[6]);
+           figure("user8", "5", arr[7]);
+           figure("user9", "28 cm", arr[8]);
+           figure("user10", "$1.22", arr[9]);
+           figure("user11", "8", arr[10]);
+           figure("user12", "8.8 miles", arr[11]);
+           figure("user13", "308", arr[12]);
+           figure("user14", "$106.00", arr[13]);
+           figure("user15", "$80.00", arr[14]);
+           figure("user16", "49", arr[15]);
+           var percentage = (correct/18.0) * 100;
+           document.writeln(correct);
+           document.writeln(percentage + "%");
+       }
+</script>
+</body>
+</html>
+
+
+
+

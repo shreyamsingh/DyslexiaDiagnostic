@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+</head>
+<body>
+    <h1>Dyslexia Test</h1>
+    <form><br>
+    Enter your age: <input type="number" id="age"/><br><br>
+    <input type="submit" value="Submit" onclick="formdata()"/><br>
+    </form>
+
+
+<script>
+function formdata()
+{
+    var correct = 0;
+    var age = document.getElementById("age").value;
+    if (age <= 7) {
+        document.writeln("Sorry, most people at this age are not fully able to distinguish left from right")
+    }
+    else {
+        var minNumber = 0; // The minimum number you want
+        var maxNumber = 1; // The maximum number you want
+        var randomnumber = Math.floor(Math.random() * (maxNumber + 1) + minNumber);
+        if (randomnumber == 0) {
+            document.writeln("X|")
+        }
+        else if (randomnumber == 1) {
+            document.writeln("|X")
+        }
+    }
+    var lastname = document.getElementById("lastname").value;
+    document.writeln("<h1>Confirmation Page</h1><br>");
+    document.writeln("Thank you for completing this form.<br><br>");
+    document.writeln("The first name you entered is " + firstname + "<br>");
+    document.writeln("The last name you entered is " + lastname);
+}
+</script>
+
+</body>
+</html>
